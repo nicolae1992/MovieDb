@@ -1,3 +1,3 @@
 # MovieDb
 
-![](exemple.gif)
+![](example.gif)
