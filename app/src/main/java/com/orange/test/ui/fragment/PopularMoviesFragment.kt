@@ -38,6 +38,7 @@ class PopularMoviesFragment : BaseFragment(), MoviesAdapter.OnItemClickListener 
         super.onViewCreated(view, savedInstanceState)
         initRecycler()
         observable()
+        adapterMovies?.setOnItemClickListener(this)
         viewModel.getPopularMovies(currentPage)
     }
 
@@ -60,8 +61,6 @@ class PopularMoviesFragment : BaseFragment(), MoviesAdapter.OnItemClickListener 
                 viewModel.getPopularMovies(currentPage)
             }
         })
-
-        adapterMovies?.setOnItemClickListener(this)
     }
 
     override fun onItemClick(id: Int) {
